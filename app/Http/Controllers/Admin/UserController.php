@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+
+//restraint les function en dessous au person connecte 
+public function __construct(){
+    $this->middleware('auth');
+}
+
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +22,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        return "listes des utilisateurs";
+
+      $users=  User::all();
+
+        return view("admin.users.index")->with('users',$users);
     }
 
     /**

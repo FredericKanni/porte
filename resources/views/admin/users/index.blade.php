@@ -8,10 +8,38 @@
                 <div class="card-header">listes des utilisateirs</div>
 
                 <div class="card-body">
-               @foreach ( $users as $user )
-                  {{$user->name}} -   {{$user->email}}
-               @endforeach
+             
 
+               <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                        @foreach ( $users as $user )
+                       
+                        <tr>
+                                <th scope="row">{{$user->id}}</th>
+                                <td>{{$user->name}}</td>
+                                <td>{{$user->email}}</td>
+
+                                <td>
+                                    {{-- on passe le nom de a route pas l url et en argument user id --}}
+                                <a href="{{route('admin.users.edit',$user->id)}}"><button class="btn btn-primary">Editer</button></a>
+<a href="{{route('admin.users.destroy',$user->id)}}"><button class="btn btn-warning">Supprimer</button></a>
+                                </td>
+                              </tr>
+                     @endforeach
+
+               
+                
+                </tbody>
+              </table>
                    
                 </div>
             </div>

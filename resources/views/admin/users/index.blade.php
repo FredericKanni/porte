@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">listes des utilisateirs</div>
+                <div class="card-header">listes des utilisateurs</div>
 
                 <div class="card-body">
 

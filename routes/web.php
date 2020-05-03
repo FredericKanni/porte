@@ -21,6 +21,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/mesprestation', 'PrestationController@index')->name('mesprestation');
+Route::get('/mesprestation/create', 'PrestationController@create')->name('mesprestationCreate');
+Route::post('/mesprestation/store', 'PrestationController@store')->name('mesprestationStore');
 
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){

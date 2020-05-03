@@ -10,7 +10,9 @@
                 <div class="card-body">
 
 
-                  page accueil profil
+               
+
+               bonjour  {{$name}}
 
                 </div>
             </div>

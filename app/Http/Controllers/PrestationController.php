@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PrestationController extends Controller
 {
@@ -46,6 +47,27 @@ class PrestationController extends Controller
         ]);
 
 
+        // Get the currently authenticated user...
+$user = Auth::user();
+
+// Get the currently authenticated user's name...
+$id = Auth::id();
+
+
+$nom = $request->nom ;
+$description = $request->description ;
+$url = $request->url ;
+
+$newpresta=[
+
+    'name'   => $nom,
+    'description'  => $description,
+    'url'  => $url,
+    'id_auteur' => $id,
+    
+];
+
+dd($newpresta );
         dd($request ->all());
     }
 

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Prestation extends Model
 {
 
-    protected $table = 'prestation';
+    protected $table = 'prestations';
     protected $fillable = ['name','description','url', 'id_auteur'];
 
     public function users(){

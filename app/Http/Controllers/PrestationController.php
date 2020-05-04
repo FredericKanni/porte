@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Prestation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -66,6 +67,9 @@ $newpresta=[
     'id_auteur' => $id,
     
 ];
+
+Prestation::create($newpresta);
+
 
 dd($newpresta );
         dd($request ->all());

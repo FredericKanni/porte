@@ -16,7 +16,7 @@ class CreatePrestationsTable extends Migration
         Schema::create('prestations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('descripton');
+            $table->string('description');
             $table->string('url');
 
             $table->bigInteger('id_auteur')->unsigned();
